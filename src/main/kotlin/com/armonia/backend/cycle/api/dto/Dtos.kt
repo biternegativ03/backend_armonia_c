@@ -25,7 +25,9 @@ data class UpdatePrefsRequest(
 
 // Responses
 
-data class CycleStartDto(val date: LocalDate)
+data class CycleStartDto(val date: LocalDate) {
+    constructor(doc: com.armonia.backend.cycle.model.CycleStartDocument) : this(doc.date)
+}
 
 data class CyclePredictionResponse(val date: LocalDate)
 
